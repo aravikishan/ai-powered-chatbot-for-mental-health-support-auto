@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Mental Health Chatbot</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/chat">Chat</a>
+        <a href="/profile" class="active">Profile</a>
+        <a href="/resources">Resources</a>
+        <a href="/about">About</a>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>User Profile</h1>
+            <form id="profile-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" value="John Doe">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" value="john@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="preferences" class="form-label">Preferences</label>
+                    <input type="text" class="form-control" id="preferences" value="anxiety">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="updateProfile()">Update Profile</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Mental Health Chatbot</p>
+    </footer>
+    <script>
+        function updateProfile() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const preferences = document.getElementById('preferences').value;
+            // Mock update
+            alert('Profile updated successfully!');
+        }
+    </script>
+</body>
+</html>
